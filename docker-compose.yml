@@ -6,14 +6,14 @@ services:
     ports:
       - "80:80"
     volumes:
-      - $(path)/www:/var/www/html
+      - ${path}/www:/var/www/html
       - "./timezone.ini:/usr/local/etc/php/conf.d/timezone.ini"
     links:
       - db:db
   db:
     image: mysql:5.7
     volumes:
-      - $(path)/data_docker/mysql:/var/lib/mysql
+      - ${path}/data_docker/mysql:/var/lib/mysql
     ports:
       - "3306:3306"
     environment:
