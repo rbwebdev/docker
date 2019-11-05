@@ -2,13 +2,13 @@ version: '2'
 
 services:
   web:
-    image: lavoweb/php-5.6
+    image: lavoweb/php-7.3
     ports:
       - "80:80"
     volumes:
       - ${path}/www:/var/www/html
       - ./timezone.ini:/usr/local/etc/php/conf.d/timezone.ini
-      - ./php.ini:/etc/php5/apache2/conf.d/php.ini
+      - ./php.ini:/etc/php7/apache2/conf.d/php.ini
       - ./vhost.conf:/etc/apache2/sites-enabled/vhost-ssl.conf
       - ./hosts:/etc/hosts
     links:
