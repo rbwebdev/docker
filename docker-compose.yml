@@ -4,7 +4,7 @@ services:
   web:
     image: lavoweb/php-7.3
     ports:
-      - "80:80"
+      - "88:80"
     volumes:
       - ${path}/www:/var/www/html
       - ./timezone.ini:/usr/local/etc/php/conf.d/timezone.ini
